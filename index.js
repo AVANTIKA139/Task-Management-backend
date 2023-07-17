@@ -7,10 +7,10 @@ app.use(express.json());
 app.post("/api/task", async (req, res) => {
   try {
     const newObject = {
-      task_Title: req.body.title,
-      task_Description: req.body.description,
-      task_Due_Date: req.body.date,
-      task_Status: req.body.status,
+      task_Title: req.body.taskTitle,
+      task_Description: req.body.taskDescription,
+      task_Due_Date: req.body.taskDueDate,
+      task_Status: req.body.taskstatus,
     };
     const taskData = new taskModel(newObject);
     await taskData.save();
